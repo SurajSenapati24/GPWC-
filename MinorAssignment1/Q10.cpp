@@ -7,8 +7,11 @@ class Test{
         }
 };
 int main(){
-    Test *t=(Test *)malloc(sizeof(Test));
+    Test *t=new Test();
     free(t);
     return 0;
 }
-//No output
+/*
+Output:
+Constructor called
+*/
