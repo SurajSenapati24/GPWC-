@@ -44,10 +44,10 @@ public:
             incomeTax = 140000 + (taxableIncome - 1500000) * 0.30;
         }
 
-        // Education and Health Cess
+        //Education and Health Cess
         cess = incomeTax * 0.04;
 
-        // Total Tax Payable
+        //Total Tax Payable
         totalTax = incomeTax + cess;
     }
 
