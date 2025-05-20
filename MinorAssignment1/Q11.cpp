@@ -43,14 +43,11 @@ public:
         } else {
             incomeTax = 140000 + (taxableIncome - 1500000) * 0.30;
         }
-
         //Education and Health Cess
         cess = incomeTax * 0.04;
-
         //Total Tax Payable
         totalTax = incomeTax + cess;
     }
-
     void printTaxSheet() {
 
         cout << "\nName in Full : " << name << endl;
