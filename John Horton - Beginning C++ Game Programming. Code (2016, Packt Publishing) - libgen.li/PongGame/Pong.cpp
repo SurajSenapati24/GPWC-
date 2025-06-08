@@ -1,4 +1,5 @@
 #include "Bat.h"
+#include "Ball.h"
 #include <sstream>
 #include <cstdlib>
 #include <SFML/Graphics.hpp>
