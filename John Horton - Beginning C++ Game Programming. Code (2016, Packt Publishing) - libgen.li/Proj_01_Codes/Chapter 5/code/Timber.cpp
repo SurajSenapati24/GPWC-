@@ -1,8 +1,8 @@
 // Include important C++ libraries here
-#include "stdafx.h"
-#include <sstream>
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
+#include <sstream>
+
 
 // Make code easier to type with "using namespace"
 using namespace sf;
@@ -30,7 +30,7 @@ int main()
 	Texture textureBackground;
 
 	// Load a graphic into the texture
-	textureBackground.loadFromFile("graphics/background.png");
+	textureBackground.loadFromFile("./graphics/background.png");
 
 	// Create a sprite
 	Sprite spriteBackground;
@@ -43,14 +43,14 @@ int main()
 
 	// Make a tree sprite
 	Texture textureTree;
-	textureTree.loadFromFile("graphics/tree.png");
+	textureTree.loadFromFile("./graphics/tree.png");
 	Sprite spriteTree;
 	spriteTree.setTexture(textureTree);
 	spriteTree.setPosition(810, 0);
 
 	// Prepare the bee
 	Texture textureBee;
-	textureBee.loadFromFile("graphics/bee.png");
+	textureBee.loadFromFile("./graphics/bee.png");
 	Sprite spriteBee;
 	spriteBee.setTexture(textureBee);
 	spriteBee.setPosition(0, 800);
@@ -65,7 +65,7 @@ int main()
 	Texture textureCloud;
 
 	// Load 1 new texture
-	textureCloud.loadFromFile("graphics/cloud.png");
+	textureCloud.loadFromFile("./graphics/cloud.png");
 
 	// 3 New sprites withe the same texture
 	Sprite spriteCloud1;
@@ -114,7 +114,7 @@ int main()
 
 	// We need to choose a font
 	sf::Font font;
-	font.loadFromFile("fonts/KOMIKAP_.ttf");
+	font.loadFromFile("./fonts/KOMIKAP_.ttf");
 
 	// Set the font to our message
 	messageText.setFont(font);
@@ -146,7 +146,7 @@ int main()
 
 	// Prepare 5 branches
 	Texture textureBranch;
-	textureBranch.loadFromFile("graphics/branch.png");
+	textureBranch.loadFromFile("./graphics/branch.png");
 
 	// Set the texture for each branch sprite
 	for (int i = 0; i < NUM_BRANCHES; i++) {
@@ -160,7 +160,7 @@ int main()
 
 	// Prepare the player
 	Texture texturePlayer;
-	texturePlayer.loadFromFile("graphics/player.png");
+	texturePlayer.loadFromFile("./graphics/player.png");
 	Sprite spritePlayer;
 	spritePlayer.setTexture(texturePlayer);
 	spritePlayer.setPosition(580, 720);
@@ -170,14 +170,14 @@ int main()
 
 	// Prepare the gravestone
 	Texture textureRIP;
-	textureRIP.loadFromFile("graphics/rip.png");
+	textureRIP.loadFromFile("./graphics/rip.png");
 	Sprite spriteRIP;
 	spriteRIP.setTexture(textureRIP);
 	spriteRIP.setPosition(600, 860);
 
 	// Prepare the axe
 	Texture textureAxe;
-	textureAxe.loadFromFile("graphics/axe.png");
+	textureAxe.loadFromFile("./graphics/axe.png");
 	Sprite spriteAxe;
 	spriteAxe.setTexture(textureAxe);
 	spriteAxe.setPosition(700, 830);
@@ -188,7 +188,7 @@ int main()
 
 	// Prepare the flying log
 	Texture textureLog;
-	textureLog.loadFromFile("graphics/log.png");
+	textureLog.loadFromFile("./graphics/log.png");
 	Sprite spriteLog;
 	spriteLog.setTexture(textureLog);
 	spriteLog.setPosition(810, 720);
@@ -203,18 +203,18 @@ int main()
 
 	// Prepare the sound
 	SoundBuffer chopBuffer;
-	chopBuffer.loadFromFile("sound/chop.wav");
+	chopBuffer.loadFromFile("./sound/chop.wav");
 	Sound chop;
 	chop.setBuffer(chopBuffer);
 
 	SoundBuffer deathBuffer;
-	deathBuffer.loadFromFile("sound/death.wav");
+	deathBuffer.loadFromFile("./sound/death.wav");
 	Sound death;
 	death.setBuffer(deathBuffer);
 
 	// Out of time
 	SoundBuffer ootBuffer;
-	ootBuffer.loadFromFile("sound/out_of_time.wav");
+	ootBuffer.loadFromFile("./sound/out_of_time.wav");
 	Sound outOfTime;
 	outOfTime.setBuffer(ootBuffer);
 	
