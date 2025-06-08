@@ -18,8 +18,8 @@ public:
 };
 
 int main() {
-    VideoMode(1920, 1080);
-    RenderWindow window(vm, "Rectangle Window", Style :: FullScreen);
+    VideoMode vm(1920, 1080);
+    RenderWindow window(vm, "Rectangle Window", Style :: Fullscreen);
 
     MyRectangle myRect;
 
@@ -28,6 +28,9 @@ int main() {
         while (window.pollEvent(event)) {
             if (event.type == Event::Closed)
                 window.close();
+        }
+        if(Keyboard::isKeyPressed(Keyboard::Escape)){
+            window.close();
         }
 
         window.clear();
